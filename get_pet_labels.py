@@ -50,13 +50,13 @@ def get_pet_labels(image_dir):
     edit_filenames = []
     pet_labels = []
     
-    for k in filenames:
-        new_names = k.lower().split("_")
+    for f in filenames:
+        new_names = f.lower().split("_")
         pet_name = ""
         
-        for i in new_names:
-            if i.isalpha():
-                pet_name += i + " "
+        for n in new_names:
+            if n.isalpha():
+                pet_name += n + " "
                 
         pet_labels.append(pet_name.strip())
         
